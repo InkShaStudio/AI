@@ -1,3 +1,13 @@
+mod body;
+mod input;
+mod thought;
+
+use body::Body;
+
 fn main() {
-    println!("Hello, world!");
+    let mut body = Body::new(100);
+    while true {
+        let i = input::line::read_input(Some("hello?"));
+        body.say(i);
+    }
 }
